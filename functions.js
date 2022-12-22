@@ -125,9 +125,9 @@ const group_activities_by_sesion= (users = []) => {
 export const logic = (DB) => {
     
     let aux = []
-    aux = sort_by_date(DB);
-    aux = group_activities_by_user(aux)
-    aux =group_activities_by_sesion(aux)
+    aux = sort_by_date(DB); /* n log n */
+    aux = group_activities_by_user(aux)/* n */
+    aux =group_activities_by_sesion(aux) /* n */
     
     return aux
 }
